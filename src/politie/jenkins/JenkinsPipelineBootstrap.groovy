@@ -12,3 +12,8 @@ def createBuilder() {
     return pipeline;
 }
 
+def createTest(){
+    node{
+        echo "hello world"
+    }
+}
