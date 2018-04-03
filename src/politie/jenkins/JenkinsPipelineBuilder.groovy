@@ -16,7 +16,7 @@ def getPipelineSteps() {
 }
 
 void allbuild(){
-    Constants.PROJECT_LIST.add(['payment','api'])
+    Constants.PROJECT_LIST.add(4)
     node(){
         println Constants.PROJECT_LIST
     }  
