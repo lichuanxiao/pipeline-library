@@ -2,7 +2,6 @@ package politie.jenkins
 
 def pipelineSteps;
 
-def projects = ['appfront','member']
 // Constructor, called from PipelineBootstrap.createBuilder().
 void initialize() {
     echo 'Initializing PipelineBuilder.'
@@ -15,7 +14,7 @@ def getPipelineSteps() {
 }
 
 void allbuild(){
-    for(project in projects) {
+    for(project in 1..3) {
         node(){
 
                 stage('sonarscan'){
