@@ -2,6 +2,7 @@ package politie.jenkins
 
 def pipelineSteps;
 
+def projects = ['appfront','member']
 // Constructor, called from PipelineBootstrap.createBuilder().
 void initialize() {
     echo 'Initializing PipelineBuilder.'
@@ -11,6 +12,26 @@ void initialize() {
 
 def getPipelineSteps() {
     return pipelineSteps
+}
+
+void allbuild(){
+    for(project in projects) {
+        node(nodeLabel){
+            try {
+                stage('sonarscan'){
+                    echo "${project} sonarscan"
+                }
+                stage('build'){
+                    echo "${project} build"
+                }
+            }
+            catch(e) {
+               currentBuild.result = "FAILED"
+            throw e 
+            }
+
+        }   
+    }
 }
 
 void mavenPipeline(String deployType, String nodeLabel, String serviceName, String defaultBranch, boolean enableJacoco) {
