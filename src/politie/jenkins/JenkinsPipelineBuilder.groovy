@@ -1,5 +1,7 @@
 package politie.jenkins
 
+import politie.jenkins.Constants
+
 def pipelineSteps;
 
 // Constructor, called from PipelineBootstrap.createBuilder().
@@ -14,7 +16,7 @@ def getPipelineSteps() {
 }
 
 void allbuild(){
-    for(project in 1..3) {
+    for(project in PROJECT_LIST) {
         node(){
 
                 stage('sonarscan'){

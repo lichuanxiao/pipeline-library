@@ -14,4 +14,5 @@ class Constants {
     static final GITLAB_API_TOKEN_CREDENTIALS_ID = 'enter api token here';
     static final ENVIRONMENT_DOMAIN_NAME = '.tld'
     static final ENVIRONMENT_TENANT = 'foobar';
+    static final PROJECT_LIST = ['appfront',"tran","paycore"]
 }
