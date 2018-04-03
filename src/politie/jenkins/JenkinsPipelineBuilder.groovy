@@ -16,8 +16,8 @@ def getPipelineSteps() {
 
 void allbuild(){
     for(project in projects) {
-        node(nodeLabel){
-            try {
+        node(){
+
                 stage('sonarscan'){
                     echo "${project} sonarscan"
                 }
@@ -25,14 +25,10 @@ void allbuild(){
                     echo "${project} build"
                 }
             }
-            catch(e) {
-               currentBuild.result = "FAILED"
-            throw e 
-            }
 
         }   
-    }
-}
+  }
+
 
 void mavenPipeline(String deployType, String nodeLabel, String serviceName, String defaultBranch, boolean enableJacoco) {
     node(nodeLabel) {
