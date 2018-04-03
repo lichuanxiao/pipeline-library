@@ -16,7 +16,7 @@ def getPipelineSteps() {
 }
 
 void allbuild(){
-    for(project in PROJECT_LIST) {
+    for(project in Constants.PROJECT_LIST) {
         node(){
 
                 stage('sonarscan'){
