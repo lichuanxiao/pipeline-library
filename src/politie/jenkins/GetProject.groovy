@@ -6,7 +6,7 @@ import java.io.File
 def getProject(){
     path = new  File(".").getPath()
     println path
-    new File("politie/jenkins/JenkinsProjectList.groovy").eachLine { line ->Constants.PROJECT_LIST.add($line)
+    new File("src/politie/jenkins/JenkinsProjectList.groovy").eachLine { line ->Constants.PROJECT_LIST.add($line)
         
     }
 }
