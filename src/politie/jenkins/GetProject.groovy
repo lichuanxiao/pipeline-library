@@ -5,7 +5,7 @@ import java.io.File
 import static groovy.io.FileType.*
 
 def getProject(BASEDIR){
-    FILEPATH = BASEDIR+"/libs/pipeline-library/src/politie/jenkins/JenkinsProjectList.txt"
+    FILEPATH = "/var/jenkins_home/jobs/jst-tran-Analysis/builds/"+BASEDIR+"/libs/pipeline-library/src/politie/jenkins/JenkinsProjectList.groovy"
 
     new File(FILEPATH).eachLine { line ->Constants.PROJECT_LIST.add($line)
         
