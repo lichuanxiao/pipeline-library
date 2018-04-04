@@ -21,7 +21,8 @@ void allbuild(){
         projectList = new GetProject()
         sh "pwd"
         sh "echo $WORKSPACE/$BUILD_ID"
-        projectList.getProject()
+        BASEDIR = $WORKSPACE/$BUILD_ID
+        projectList.getProject(BASEDIR)
         println Constants.PROJECT_LIST
     }  
     for(project in Constants.PROJECT_LIST) {
