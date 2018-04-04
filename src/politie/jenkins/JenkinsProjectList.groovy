@@ -1,3 +1,4 @@
+jst-api-sit-Build
 jst-account-sit-Build
 jst-accountant-sit-Build
 jst-alipay-sit-Build

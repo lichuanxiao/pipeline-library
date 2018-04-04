@@ -24,13 +24,19 @@ void allbuild(){
         projectList.getProject(BASEDIR)
     }  
     for(project in Constants.PROJECT_LIST) {
-        node(){
-                stage('project'){
-                    build project
+        try {
+            node(){
+                    stage(project){
+                        build project
+                    }
                 }
-            }
 
-        }   
+            }
+        }
+        catch(Exception e) {
+            println project+":build error"
+        }
+          
   }
 
 // Return the contents of this script as object so it can be re-used in Jenkinsfiles.
