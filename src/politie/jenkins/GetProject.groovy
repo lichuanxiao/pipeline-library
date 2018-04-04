@@ -7,8 +7,9 @@ import static groovy.io.FileType.*
 def getProject(BASEDIR){
     FILEPATH = "/var/jenkins_home/jobs/jst-tran-Analysis/builds/"+BASEDIR+"/libs/pipeline-library/src/politie/jenkins/JenkinsProjectList.groovy"
 
-    project = new File(FILEPATH)
-    project.eachLine { line ->println line;println "now 2"
+    PROJECT_LIST = new File(FILEPATH).readLines()
+    for(project in PROJECT_LIST) {
+        println project
     }
 }
 
