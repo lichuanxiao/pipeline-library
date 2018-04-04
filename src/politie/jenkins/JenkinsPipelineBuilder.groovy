@@ -24,7 +24,6 @@ void allbuild(){
        // BASEDIR = env.WORKSPACE+"/"+env.BUILD_ID
        BASEDIR = env.BUILD_ID
         projectList.getProject(BASEDIR)
-        println Constants.PROJECT_LIST
     }  
     for(project in Constants.PROJECT_LIST) {
         node(){
