@@ -2,6 +2,7 @@ package politie.jenkins
 
 import politie.jenkins.Constants
 import java.io.File
+import static groovy.io.FileType.*
 
 def getProject(){
     path = new  File(".").getPath()
