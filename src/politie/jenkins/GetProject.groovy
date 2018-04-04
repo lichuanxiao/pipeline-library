@@ -4,7 +4,8 @@ import politie.jenkins.Constants
 import java.io.File
 
 def getProject(){
-    new  File(".").getPath()
+    path = new  File(".").getPath()
+    println path
     new File("politie/jenkins/JenkinsProjectList.groovy").eachLine { line ->Constants.PROJECT_LIST.add($line)
         
     }
