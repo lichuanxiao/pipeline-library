@@ -5,9 +5,10 @@ import java.io.File
 import static groovy.io.FileType.*
 
 def getProject(){
-    path = new  File(".").getPath()
-    println path
-    new File(baseDir,"JenkinsProjectList.groovy").eachLine { line ->Constants.PROJECT_LIST.add($line)
+    path = new  File("test.txt")
+    abpath = path.absolutePath()
+    println abpath
+    new File("JenkinsProjectList.txt").eachLine { line ->Constants.PROJECT_LIST.add($line)
         
     }
 }
