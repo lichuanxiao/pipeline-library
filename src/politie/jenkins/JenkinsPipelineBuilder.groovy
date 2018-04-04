@@ -33,9 +33,7 @@ void allbuild(){
             println project+":build error"
             }
         }
+}
 
 // Return the contents of this script as object so it can be re-used in Jenkinsfiles.
 return this;
-
-
-
