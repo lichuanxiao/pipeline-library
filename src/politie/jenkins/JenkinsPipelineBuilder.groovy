@@ -25,11 +25,8 @@ void allbuild(){
     }  
     for(project in Constants.PROJECT_LIST) {
         node(){
-                stage('sonarscan'){
-                    echo "${project} sonarscan"
-                }
-                stage('build'){
-                    echo "${project} build"
+                stage('project'){
+                    build project
                 }
             }
 
