@@ -19,6 +19,7 @@ void allbuild(){
     
     node(){
         projectList = new GetProject()
+        sh "pwd"
         projectList.getProject()
         println Constants.PROJECT_LIST
     }  
