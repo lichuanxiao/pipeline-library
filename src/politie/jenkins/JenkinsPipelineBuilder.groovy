@@ -19,11 +19,7 @@ void allbuild(){
     
     node(){
         projectList = new GetProject()
-        sh "pwd"
-        sh "echo $WORKSPACE/$BUILD_ID"
-        sh "echo $JENKINS_HOME"
-        sh "env"
-       // BASEDIR = env.WORKSPACE+"/"+env.BUILD_ID
+ // BASEDIR = env.WORKSPACE+"/"+env.BUILD_ID
        BASEDIR = env.JENKINS_HOME+"/jobs/"+env.JOB_NAME+"/builds/"+env.BUILD_ID
         projectList.getProject(BASEDIR)
     }  
