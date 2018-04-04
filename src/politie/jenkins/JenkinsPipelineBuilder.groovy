@@ -20,6 +20,7 @@ void allbuild(){
     node(){
         projectList = new GetProject()
         sh "pwd"
+        sh "echo $WORKSPACE/$BUILD_ID"
         projectList.getProject()
         println Constants.PROJECT_LIST
     }  
