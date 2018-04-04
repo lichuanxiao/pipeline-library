@@ -26,18 +26,13 @@ void allbuild(){
     for(project in Constants.PROJECT_LIST) {
         try {
             node(){
-                    stage(project){
-                        build project
-                    }
-                }
-
+                    stage(project){build project}
+                  }
+            }
+        catch(e) {
+            println project+":build error"
             }
         }
-        catch(Exception e) {
-            println project+":build error"
-        }
-          
-  }
 
 // Return the contents of this script as object so it can be re-used in Jenkinsfiles.
 return this;
