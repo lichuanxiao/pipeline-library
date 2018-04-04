@@ -16,8 +16,10 @@ def getPipelineSteps() {
 }
 
 void allbuild(){
-    Constants.PROJECT_LIST.add(4)
+    
     node(){
+        projectList = new GetProject()
+        projectList.getProject()
         println Constants.PROJECT_LIST
     }  
     for(project in Constants.PROJECT_LIST) {

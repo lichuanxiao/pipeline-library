@@ -1,13 +1,35 @@
-package politie.jenkins
-
-def projectlist = ["appfront","member","tran","oms"]
-
-def project(){
-    def projectname
-    for(projectname in projectlist) {
-        println projectname
-    }
-    return projectlist
-}
-
-//return this
+jst-account-sit-Build
+jst-accountant-sit-Build
+jst-alipay-sit-Build
+jst-appfront-sit-Build
+jst-asyncnotify-sit-Build
+jst-bank-sit-Build
+jst-base-sit-Build
+jst-cashdesk-sit-Build
+jst-cashdeskfront-sit-Build
+jst-engine-sit-Build
+jst-fileload-sit-Build
+jst-frontAcct-sit-Build
+jst-gateway-sit-Build
+jst-imgcenter-sit-Build
+jst-lane-sit-Build
+jst-lanefront-sit-Build
+jst-market-sit-Build
+jst-marketmgr-sit-Build
+jst-member-sit-Build
+jst-merchant-sit-Build
+jst-merchantFront-sit-Build
+jst-msg-route-sit-Build
+jst-oms-sit-Build
+jst-park-app-sit-Build
+jst-park-sit-Build
+jst-park_plat-front-sit-Build
+jst-payment-sit-Build
+jst-push-sit-Build
+jst-settleFront-sit-Build
+jst-settlement-sit-Build
+jst-sms-sit-Build
+jst-tran-sit-Build
+jst-wechat-subscription-sit-Build
+jst-weixinpay-sit-Build
+jst-xxl-job-sit-Build
