@@ -16,7 +16,7 @@ How to use
     String serviceName = 'my-service'
     String gitBranch = 'master'
 
-    builder.mavenApplicationPipeline(serviceName, gitBranch)        
+    builder.mavenApplicationPipeline(serviceName, gitBranch)
     ```
 * Start your Jenkins job.
 

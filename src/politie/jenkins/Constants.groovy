@@ -15,4 +15,7 @@ class Constants {
     static final ENVIRONMENT_DOMAIN_NAME = '.tld'
     static final ENVIRONMENT_TENANT = 'foobar';
     static PROJECT_LIST = []
+    static BUILD_FAILED = 0
+    static BUILD_SUCCEED = 0
+    static BUILD_NUM = 0
 }
