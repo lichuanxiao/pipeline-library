@@ -42,7 +42,7 @@ void allbuild(){
             }
         }
     node(){
-        Constants.SUCCEED = Constants.BUILD_NUM - Constants.BUILD_FAILED
+        Constants.BUILD_SUCCEED = Constants.BUILD_NUM - Constants.BUILD_FAILED
         report = new CreateReport()
         report.createreport(failed_projects,BASEDIR)
     }
