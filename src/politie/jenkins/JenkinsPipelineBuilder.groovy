@@ -1,6 +1,9 @@
 package politie.jenkins
 
 import politie.jenkins.Constants
+import groovy.text.*
+import java.io.*
+
 
 def pipelineSteps;
 
@@ -17,6 +20,7 @@ def getPipelineSteps() {
 
 void allbuild(){
     
+    def failed_projects = []
     node(){
         projectList = new GetProject()
  // BASEDIR = env.WORKSPACE+"/"+env.BUILD_ID
@@ -33,13 +37,17 @@ void allbuild(){
         catch(e) {
             println project+":build error"
             Constants.BUILD_FAILED += 1
-
+            failed_projects = failed_projects.add(project)
             }
         }
     node(){
         Constants.SUCCEED = Constants.BUILD_NUM - Constants.BUILD_FAILED
+        report = new CreateReport()
+        report.createreport(failed_projects,BASEDIR)
     }
+
 }
+
 
 // Return the contents of this script as object so it can be re-used in Jenkinsfiles.
 return this;

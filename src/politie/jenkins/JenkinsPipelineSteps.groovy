@@ -93,6 +93,8 @@ void runMavenBuild(boolean enableJacoco) {
     archiveTestResults()
 }
 
+void 
+
 void archiveTestResults() {
     step([$class: 'JUnitResultArchiver', testResults: '**/target/**/TEST*.xml', allowEmptyResults: true])
 }
