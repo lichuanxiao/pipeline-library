@@ -30,6 +30,7 @@ void allbuild(){
     for(project in Constants.PROJECT_LIST) {
         try {
             node(){
+                println project
                     stage(project){build project}
                     Constants.BUILD_NUM += 1
                   }
@@ -37,7 +38,7 @@ void allbuild(){
         catch(e) {
             println project+":build error"
             Constants.BUILD_FAILED += 1
-            failed_projects = failed_projects.add(project)
+            failed_projects = failed_projects+project
             }
         }
     node(){
