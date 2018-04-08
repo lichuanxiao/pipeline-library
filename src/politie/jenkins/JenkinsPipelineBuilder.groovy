@@ -27,12 +27,18 @@ void allbuild(){
         try {
             node(){
                     stage(project){build project}
+                    Constants.BUILD_NUM += 1
                   }
             }
         catch(e) {
             println project+":build error"
+            Constants.BUILD_FAILED += 1
+
             }
         }
+    node(){
+        Constants.SUCCEED = Constants.BUILD_NUM - Constants.BUILD_FAILED
+    }
 }
 
 // Return the contents of this script as object so it can be re-used in Jenkinsfiles.
